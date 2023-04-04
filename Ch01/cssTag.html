@@ -35,6 +35,23 @@
         #box3{padding: 10px 30px 5px;}
         #box4{margin: 10px; padding: 10px 20px;}
         #box5{ margin: 10px 30px 0 50px; padding: 30px 0 }
+
+        /* position */
+        .box-container2{
+            width: 350px;
+			border: 2px solid #e91bf5;
+        }
+
+        .box-container2 div{
+            padding: 10px;
+			border: 1px solid green;
+			background-color: #e3ffe0;
+        }
+
+        #box11{position: static; top: 20px; left: 30px;}
+        #box22{position: relative; top: 20px; left: 30px;}
+        #box33{position: absolute; top: 20px; right: 30px;}
+        #box44{position: fixed; top: 20px; right: 30px;}
     </style>
 </head>
 <body>
@@ -71,6 +88,14 @@
 	</div>
 	<div class="box-container">
 		<div id="box5">m: 10 30 0 50<br>p: 30 0</div>
+	</div>
+
+    <!-- position -->
+    <div class="box-container2">
+		<div id="box11">static 박스</div>
+		<div id="box22">relative 박스</div>
+		<div id="box33">absolute 박스</div>
+		<div id="box44">fixed 박스</div> <!-- '출력 결과' 란이 아닌, 전체 페이지에서 고정되어 보여짐 -->
 	</div>
 </body>
 </html>

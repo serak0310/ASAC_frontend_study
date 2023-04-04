@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: beige;
+            height: 100vh;
+            display: flex;  /*flex 지정*/
+            flex-direction: row;    /*row-reverse, column, column-reverse*/
+            flex-wrap: wrap;    /*item이 꽉차면 다음으로 넘어감. default=nowrap, wrap-reverse:반대로 랩핑*/
+            /* flex-flow:column nowrap;    direction과 wrap을 한 번에 작성 가능 */
+
+            justify-content: space-between;    /*중심 축에서 아이템 배치*/
+                                            /*item을 어떻게 배치할 지. flex-end: 아이템 순서는 유지하돼 오른쪽끝에 붙음
+                                            , center, space-around:박스를 둘러싸는공간이 생김, space-evenly: 똑같은 간격 넣어줌
+                                            , space-between: 사이 간격 균일*/
+            align-items: center;             /*반대 축에서 아이템 배치*/
+                                            /*baseline: 텍스트를 베이스라인에 맞춰 균등하게 배치*/
+            align-content:space-between;    /*반대축의 사이 간격 균일*/
+
+        }
+        .item{
+            width: 40px;
+            height: 40px;
+            /*컨테이너의 사이즈가 바뀔 때 어떻게 아이템이 줄어들고 늘어날 지*/
+            flex-grow: 1;       /*default=0, 빈 공간을 채우기 위해 늘어남*/
+            flex-shrink: 1;     /*default=0, 창이 줄어들 때 어떻게 행동할 지 지정*/
+
+           
+        }
+        .item1{
+            background: #ef9a9a;
+            flex-basis: 60%;    /*item들이 공간을 얼마나 차지할 지 세부적으로 명시. default=auto*/
+            align-self: center; /*컨테이너로 지정한 것을 벗어나 item별로 위치 지정*/
+        }
+        .item2{background: #f48fb1}
+        .item3{background: #ce93d8}
+        .item4{background: #b39ddb}
+        .item5{background: #90caf9}
+        .item6{background: #a5d6a7}
+        .item7{background: #bfd6a5}
+        .item8{background: #d3d6a5}
+        .item9{background: #d6c3a5}
+        .item10{background: #d6a5a5}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+        <div class="item item10">10</div>
+    </div>
+</body>
+</html>
