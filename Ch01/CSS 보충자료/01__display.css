@@ -1,0 +1,13 @@
+* {
+  font-size: 50px;
+}
+
+div{
+  display: none;
+  /* display: inline; */
+  display: inline-block;  /*block: 상하좌우 마진, span: 좌우마진만*/
+}
+
+span{
+  display: block;
+}

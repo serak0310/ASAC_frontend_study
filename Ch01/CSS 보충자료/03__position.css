@@ -1,0 +1,35 @@
+* {
+  font-size: 20px;
+}
+
+.flex-container > div {
+  width: 100px;
+  height: 100px;
+  background-color: bisque;
+  margin: 20px;
+}
+
+/*relateive 기준 = 원래 위치*/
+.item2 {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+/*absolute 기준 = 가장 가까운 부모(body)*/
+.item3 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/*fixed 기준 = 가장 가까운 부모(body)*/
+.item4 {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+}
+
+#box {
+  height: 100vh;
+}

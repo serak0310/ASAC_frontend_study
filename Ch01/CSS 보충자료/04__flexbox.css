@@ -1,0 +1,82 @@
+/* * {
+  font-size: 1.5rem;
+}
+
+.flex-container {
+  background: white;
+  padding: 10px;
+  border: 5px solid black;
+}
+
+.item1 {
+  background: #ff9640;
+  color: white;
+  padding: 10px;
+  border: 5px solid black;
+  margin: 10px;
+  height: 250px;
+}
+
+.item2 {
+  background: #f5c096;
+  color: white;
+  padding: 10px;
+  border: 5px solid black;
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+}
+
+.item3 {
+  background: #d3c0b1;
+  color: white;
+  padding: 10px;
+  border: 5px solid black;
+  margin: 10px;
+  width: 350px;
+}
+
+.item4 {
+  background: #d3c0b1;
+  color: white;
+  padding: 10px;
+  border: 5px solid black;
+  margin: 10px;
+  width: 350px;
+} */
+
+
+* {
+  font-size: 1.5rem;
+}
+
+.nav{
+  /*선언*/
+  display: flex;
+
+  /*리스트 점 없애기*/  
+  list-style: none;   
+
+  /*flex-direction
+  default: row*/
+  flex-direction: row;
+
+  /*flex-wrap
+  default = nowrap*/
+  flex-wrap: wrap;
+
+  /*align-items
+  default: stretch*/
+  align-items: center;
+}
+
+.navItem{
+  width: 300px;
+  height: 50px;
+  background-color: beige;
+  margin: 10px;
+}
+
+.nav1{
+  height: 100px;
+}
