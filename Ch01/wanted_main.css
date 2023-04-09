@@ -141,6 +141,12 @@ button {
 
 body {
   font-family: "Noto Sans KR", sans-serif;
+  -ms-overflow-style: none; /*스크롤뷰 안보이게*/
+}
+
+::-webkit-scrollbar {
+  /*스크롤뷰 안보이게*/
+  display: none;
 }
 
 header {
@@ -155,7 +161,7 @@ header {
 
 .nav {
   height: 100%;
-  width: 90%;
+  width: 100%;
   max-width: 1060px;
   margin: 0 auto; /* 가운데 정렬 */
 
@@ -244,7 +250,7 @@ main {
   padding-top: 25px;
 
   height: 100%;
-  width: 90%;
+  width: 100%;
   max-width: 1060px;
 
   margin: 0 auto; /* 가운데 정렬 */
@@ -823,10 +829,10 @@ footer {
 }
 
 .bottom_footer p {
-  font-size: small;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 400;
   color: #767676;
-  width: calc(100% - 230px);
+  width: calc(100% - 270px);
   margin-right: 40px;
   line-height: 1.6666666667em;
 }
