@@ -86,6 +86,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -100,17 +101,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -118,6 +123,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -141,7 +147,8 @@ button {
 
 body {
   font-family: "Noto Sans KR", sans-serif;
-  -ms-overflow-style: none; /*스크롤뷰 안보이게*/
+  -ms-overflow-style: none;
+  /*스크롤뷰 안보이게*/
 }
 
 ::-webkit-scrollbar {
@@ -163,7 +170,8 @@ header {
   height: 100%;
   width: 100%;
   max-width: 1060px;
-  margin: 0 auto; /* 가운데 정렬 */
+  margin: 0 auto;
+  /* 가운데 정렬 */
 
   display: flex;
   flex-direction: row;
@@ -244,12 +252,13 @@ header {
 main {
   width: 100%;
   max-width: 1060px;
-  margin: 0 auto; /* 가운데 정렬 */
+  margin: 0 auto;
+  /* 가운데 정렬 */
 }
 
 .custom_section {
   background-color: #fff;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   padding-top: 90px;
   padding-bottom: 25px;
@@ -266,6 +275,7 @@ main {
   justify-content: flex-start;
   align-items: center;
 }
+
 .custom_section .top_drop .mainCategory_btn span {
   padding-top: 3px;
   margin-right: 15.5px;
@@ -358,6 +368,7 @@ main {
 .custom_section .middle_drop .right .middle_drop_btn {
   margin-right: 0px;
 }
+
 .custom_section .divider_container {
   max-width: 1060px;
   margin: 25px auto;
@@ -378,7 +389,6 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 5px;
-  height: 100px;
   overflow: scroll;
 }
 
@@ -418,11 +428,10 @@ main {
   z-index: 10;
 }
 
-.recommend_section{
-    background-color: #fff;
-    border: 1px solid red;
-    width: 100%;
-    padding-bottom: 25px;
+.recommend_section {
+  background-color: #fff;
+  width: 100%;
+  padding-bottom: 25px;
 }
 
 .recommend_section .bookmark {
@@ -440,49 +449,194 @@ main {
   margin-right: 5px;
 }
 
-.recommend_section .section_title{
-    font-size: 22px;
-    font-weight: 500;
-    line-height: normal;
-    color: #333;
-    margin: 20px 0 14px;
+.recommend_section .section_title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: normal;
+  color: #333;
+  margin: 20px 0 14px;
 }
 
-.recommend_section .company_list{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 25px;
+.recommend_section .company_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
 }
 
-.recommend_section .company_list a .header{
-    position: relative;
-    left: 10px;
+.recommend_section .company_list a .header {
+  position: relative;
 }
 
-.recommend_section .company_list a .header img{
-    width: calc(100% - 20px);
-    border-radius: 3px 3px 0 0;
-    background-position: 50%;
-    background-size: cover;
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
-    background-repeat: no-repeat;
+.recommend_section .company_list a .header img {
+  max-width: 197px;
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+  background-position: 50%;
+  background-size: cover;
+  background-color: #f2f2f2;
+  border: 1px solid #e1e2e3;
+  background-repeat: no-repeat;
 }
 
-.recommend_section .company_list a .footer{
-    margin: 0 9px;
-    padding: 34px 16px 0;
-    height: 124px;
-    border: 1px solid #e1e2e3;
-    border-top: none;
-    border-radius: 0 0 3px 3px;
+.recommend_section .company_list a .footer {
+  margin: -2px auto 0px;
+  padding: 34px 16px 0;
+  height: 90px;
+  border: 1px solid #e1e2e3;
+  /* border-top: none; */
+  border-radius: 0 0 3px 3px;
+  position: relative;
 }
 
-.recommend_section .company_list a .footer img{
-    position: absolute;
-    top: -25px;
-    left: 16px;
-    width: 50px;
-    height: 50px;
+.recommend_section .company_list a .footer img {
+  position: absolute;
+  top: -25px;
+  left: 16px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e1e2e3;
+}
+
+.recommend_section .company_list a .footer h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.recommend_section .company_list a .footer h5 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999;
+  margin-top: 6px;
+}
+
+.grid_section{
+  background-color: #fff;
+  width: 100%;
+}
+
+.grid_section .enterprise_list{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap:5px;
+  flex-wrap: wrap;
+}
+
+.grid_section .enterprise_list .content{
+  width:100%;
+  max-width: 250px;
+  flex-shrink: 0;
+  margin-bottom: 10px;
+}
+
+.grid_section .enterprise_list .content .header{
+position: relative;
+}
+
+.grid_section .enterprise_list .content .header .thumbnail{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 3px;
+}
+
+.grid_section .enterprise_list .content .header .bookmark{
+  position: absolute;
+  background: none;
+  padding: 8px 6px;
+  width: 42px;
+  height: 42px;
+  top: 0;
+  right: 0;
+}
+
+.grid_section .enterprise_list .content .body{
+  padding: 14px 0px;
+}
+
+.grid_section .enterprise_list .content .body .title{
+  color: #333;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.grid_section .enterprise_list .content .body .name{
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.grid_section .enterprise_list .content .body .responseRate{
+  border: 1px solid #00aead;
+  color: #00aead;
+  border-radius: 2px;
+  background-color: #fff;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: 4px;
+  padding: 0 5px;
+  line-height: 19px;
+}
+
+.grid_section .enterprise_list .content .body .region{
+  font-weight: 400;
+  color: #999;
+  font-size: 14px;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.grid_section .enterprise_list .content .body .pay{
+  margin-top: 10px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.grid_section .typetest_banner {
+  display: flex;
+  align-items: center;
+
+  max-width: 1060px;
+  margin: 35px auto 60px;
+
+  width: 100%;
+  height: 108px;
+
+  background: #0d99ff;
+  color: #fff;
+  border-radius: 15px;
+  font-size: medium;
+  font-weight: 500;
+
+  background-image: url(https://static.wanted.co.kr/images/type-test/typetest-banner-image.png);
+  background-size: auto 100%;
+  background-position: 100%;
+  background-repeat: no-repeat;
+}
+
+.grid_section .typetest_banner .banner_wrap {
+  padding: 28px 0px 22px 120px;
+}
+
+.grid_section .typetest_banner .banner_wrap div:first-child {
+  font-size: 130%;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.grid_section .typetest_banner .banner_wrap .gotxt_wrap {
+  display: flex;
+  align-items: center;
+}
+
+.grid_section .typetest_banner .banner_wrap svg {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+  margin-left: 3px;
 }
