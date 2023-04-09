@@ -4,6 +4,11 @@
 
 # R = runx&runy
 # print(min(R) if R else -1)
-answer = [3, 6, 2]
-answer.sort()
-print(answer)
+s1 = ["a", "b", "c"]
+s2 = ["com", "b", "d", "p", "c"]
+
+count = 0
+for i in range(len(s1)):
+    if s1[i] in s2:
+        count +=1
+print(count)
