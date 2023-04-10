@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        동기/비동기
+        동기: 라인별로 하나씩 실행되는 것(순수한 자바스크립트)
+        비동기: 
+
+        CallStack
+        순수한 javascript는 동기적으로 하나씩 실행
+        WebAPI 요소들은 비동기. CallStack에 들어가지않고 대기
+
+        WebAPI 예시
+        1. DOM
+        2. XMLHttpRequest: 프론트에서 API 요청할 시 사용
+        3. setTimeout
+        */
+       
+        // setTimeout은 따로 관리되어 실행한다면, abc먼저 찍힌 후 setTimeout 찍힘
+        console.log('a');
+        setTimeout(()=>{
+            console.log('setTimeout');
+        }, 0)
+        console.log('b');
+        console.log('c');
+
+        // XMLHttpRequest 따로 관리됨
+        const xhr = new XMLHttpRequest()
+        xhr.open()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

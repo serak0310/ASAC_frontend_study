@@ -27,6 +27,14 @@
         // 실행부 == 전달인자(Argument)
         console.log(add(1,2));
 
+        console.log(minus(3,2));
+
+        // 콜백함수 (Callback)
+        // 전달인자에 함수 사용
+        const result=minus(10, (a, b)=>{
+            a=2, b=3;
+            return a+b;
+        })
     </script>
 </head>
 <body>

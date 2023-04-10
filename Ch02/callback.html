@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        비동기 콜백
+        : 콜백 함수 자체는 동기
+        : dom 요소 작동, 웹api 사용할 때
+        */
+
+       /*
+       http요청 시 callback 사용
+       - 지도 api 호출할 때
+       - 지도의 값을 다음 요청으로 쓴다.
+
+       요청(()=>{
+            지도의 값을 받아옴
+            다음 뿌리는 요청(()=>{
+                지도 값
+            })
+       })
+       */
+       setTimeout(()=>{
+            console.log('1초 뒤');  
+            setTimeout(()=>{
+                console.log('1초 뒤>');
+                setTimeout(()=>{
+                    console.log('1초 뒤>>');
+                }, 1000)
+            }, 1000)
+       }, 1000)
+
+       /*
+       콜백이 많아질 시 코드 해석이 어려워짐 == 콜백지옥 CallbackHell
+       callback 대신
+
+       promise
+       async/await
+
+       많이 사용
+       */
+       // Promise
+        function getData(){
+            // const getData = new Promise((res, rej)=>{ 화살표함수식 표현
+            // }); 
+            const getData = new Promise(function (res, rej){    //res:성공, rej:실패시 인자
+                // httprequest
+                const response = fetch();
+                res(response); 
+            });
+
+
+            // then 사용으로 간단하게 표현 가능
+            // getData.then(
+            //     다시 유저에게 뿌려주기
+            // ).then(
+            //     거리 계산 후 다시 유저에게 뿌려주기
+            // )
+
+            // 함수 앞에 asnync
+            // 변수로 데이터를 하나씩 받아와 다른 곳에서 활용 가능
+            async function 지도데이터받아와서처리하는함수(){
+                const a = await 지도 데이터를 받아오는 httprequest
+                const b = await 받은 데이터를 다시 보내줌
+                const c = await 받은 데이터를 계산해서 보내주는 역할
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
