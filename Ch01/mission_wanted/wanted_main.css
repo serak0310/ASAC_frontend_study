@@ -102,6 +102,9 @@ section {
 }
 body {
   line-height: 1;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 ol,
 ul {
@@ -594,22 +597,25 @@ main {
   font-weight: 600;
 }
 
-.whole_section .event_section .banner_header .center_txt .moreEvent_btn {
+.moreEvent_btn {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  position: relative;
   margin-top: 8px;
   color: #8a8a8a;
   font-size: 100%;
   font-weight: 400;
 }
 
-.whole_section .event_section .banner_header .center_txt .moreEvent_btn div {
+.whole_section .event_section .banner_header .center_txt .moreEvent_btn svg {
   width: 15px;
   height: 15px;
   fill: #8a8a8a;
+  right: 60px;
+  top: 2px;
   margin-left: 5px;
+  position: absolute;
 }
 
 .whole_section .event_section .banner_main {
