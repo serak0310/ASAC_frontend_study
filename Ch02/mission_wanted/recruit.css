@@ -1,0 +1,642 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ------------------------- 시작 --------------------------- */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  -ms-overflow-style: none;
+  /*스크롤뷰 안보이게*/
+}
+
+::-webkit-scrollbar {
+  /*스크롤뷰 안보이게*/
+  display: none;
+}
+
+header {
+  background-color: white;
+  border-bottom: 1px solid #e1e2e3;
+  height: 50px;
+  width: 100%;
+  /* 상단에 고정 후 띄우기 */
+  position: fixed;
+  z-index: 999;
+}
+
+.nav {
+  height: 100%;
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  /* 가운데 정렬 */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav .logo .menu-btn {
+  margin-right: 12px;
+  width: 17px;
+  height: 14px;
+}
+
+.nav .logo .title {
+  width: 75px;
+  height: 30px;
+}
+
+.nav .logo .title img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav .main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav .main-menu li a {
+  padding: 15px;
+  font-weight: 600;
+  font-size: small;
+  font-weight: 500;
+}
+
+.nav .sub-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav .sub-menu button {
+  padding: 0 10px;
+  font-weight: 600;
+}
+
+.nav .sub-menu .signUp-btn {
+  font-weight: 500;
+}
+
+.nav .sub-menu li:last-child {
+  display: flex;
+}
+
+.nav .sub-menu li p {
+  font-weight: 400;
+  color: #e1e2e3;
+  font-size: small;
+}
+
+.nav .sub-menu .EPService {
+  font-size: small;
+  border: 1px solid #e1e2e3;
+  border-radius: 15px;
+  height: 30px;
+  line-height: 30px;
+  color: #666;
+  padding: 0 10px;
+  margin-left: 15px;
+  font-weight: 400;
+}
+
+main {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  /* 가운데 정렬 */
+}
+
+.custom_section {
+  background-color: #fff;
+  /* border: 1px solid red; */
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 25px;
+}
+
+.custom_section .top_drop {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.custom_section .top_drop .mainCategory_btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.custom_section .top_drop .mainCategory_btn span {
+  padding-top: 3px;
+  margin-right: 15.5px;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  color: #333;
+}
+
+.custom_section .top_drop .mainCategory_btn div {
+  border: 1px solid #e1e2e3;
+  background-color: #fff;
+  width: 26px;
+  height: 26px;
+  align-self: center;
+  border-radius: 70%;
+  overflow: hidden;
+  position: relative;
+}
+
+.custom_section .top_drop .mainCategory_btn div svg {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  object-fit: cover;
+}
+
+.custom_section .top_drop .divider {
+  /* margin: auto 15px; */
+  font-size: 28px;
+  line-height: 29px;
+  padding: 3px 24px 3px;
+  color: #ececec;
+}
+
+.custom_section .top_drop .middleCategory_btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.custom_section .top_drop .middleCategory_btn span {
+  padding-top: 3px;
+  margin-right: 15.5px;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  color: #333;
+}
+
+.custom_section .top_drop .middleCategory_btn div {
+  border: 1px solid #e1e2e3;
+  background-color: #fff;
+  width: 26px;
+  height: 26px;
+  align-self: center;
+  border-radius: 70%;
+  overflow: hidden;
+  position: relative;
+}
+
+.custom_section .top_drop .middleCategory_btn div svg {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  object-fit: cover;
+}
+
+.custom_section .middle_drop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.custom_section .middle_drop .middle_drop_btn {
+  display: inline-flex;
+  height: 40px;
+  padding: 0 15px;
+  margin-bottom: 0;
+  border-radius: 5px;
+  border: 1px solid #ececec;
+  font-size: 14px;
+  font-weight: 300;
+  gap: 8px;
+  align-items: center;
+  margin-right: 6px;
+}
+
+.custom_section .middle_drop .right .middle_drop_btn {
+  margin-right: 0px;
+}
+
+.custom_section .divider_container {
+  max-width: 1060px;
+  margin: 25px auto;
+  background-color: rgba(236, 236, 236, 0.7);
+  height: 1px;
+  border: none;
+}
+
+.custom_section .bottom_tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.custom_section .bottom_tag .btn_slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  overflow: scroll;
+}
+
+.custom_section .bottom_tag .interest_btn {
+  height: 32px;
+  padding: 8px 14px;
+  border-radius: 20px;
+
+  background: rgb(242, 251, 245);
+
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #333;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.custom_section .bottom_tag .interest_btn img {
+  width: 16px;
+  height: 16px;
+}
+
+.custom_section .bottom_tag .btn {
+  width: 20px;
+  height: 16px;
+  fill: #ececec;
+  padding: 7px;
+
+  align-self: center;
+  border: 1px solid #e1e2e3;
+  border-radius: 9999px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.recommend_section {
+  background-color: #fff;
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+.recommend_section .bookmark {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #36f;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.recommend_section .bookmark svg:first-child {
+  margin-right: 5px;
+}
+
+.recommend_section .section_title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: normal;
+  color: #333;
+  margin: 20px 0 14px;
+}
+
+.recommend_section .company_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.recommend_section .company_list a .header {
+  position: relative;
+}
+
+.recommend_section .company_list a .header img {
+  max-width: 197px;
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+  background-position: 50%;
+  background-size: cover;
+  background-color: #f2f2f2;
+  border: 1px solid #e1e2e3;
+  background-repeat: no-repeat;
+}
+
+.recommend_section .company_list a .footer {
+  margin: -2px auto 0px;
+  padding: 34px 16px 0;
+  height: 90px;
+  border: 1px solid #e1e2e3;
+  /* border-top: none; */
+  border-radius: 0 0 3px 3px;
+  position: relative;
+}
+
+.recommend_section .company_list a .footer img {
+  position: absolute;
+  top: -25px;
+  left: 16px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e1e2e3;
+}
+
+.recommend_section .company_list a .footer h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.recommend_section .company_list a .footer h5 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999;
+  margin-top: 6px;
+}
+
+.grid_section{
+  background-color: #fff;
+  width: 100%;
+}
+
+.grid_section .enterprise_list{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap:5px;
+  flex-wrap: wrap;
+}
+
+.grid_section .enterprise_list .content{
+  width:100%;
+  max-width: 250px;
+  flex-shrink: 0;
+  margin-bottom: 10px;
+}
+
+.grid_section .enterprise_list .content .header{
+position: relative;
+}
+
+.grid_section .enterprise_list .content .header .thumbnail{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 3px;
+}
+
+.grid_section .enterprise_list .content .header .bookmark{
+  position: absolute;
+  background: none;
+  padding: 8px 6px;
+  width: 42px;
+  height: 42px;
+  top: 0;
+  right: 0;
+}
+
+.grid_section .enterprise_list .content .body{
+  padding: 14px 0px;
+}
+
+.grid_section .enterprise_list .content .body .title{
+  color: #333;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.grid_section .enterprise_list .content .body .name{
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.grid_section .enterprise_list .content .body .responseRate{
+  border: 1px solid #00aead;
+  color: #00aead;
+  border-radius: 2px;
+  background-color: #fff;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: 4px;
+  padding: 0 5px;
+  line-height: 19px;
+}
+
+.grid_section .enterprise_list .content .body .region{
+  font-weight: 400;
+  color: #999;
+  font-size: 14px;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.grid_section .enterprise_list .content .body .pay{
+  margin-top: 10px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.grid_section .typetest_banner {
+  display: flex;
+  align-items: center;
+
+  max-width: 1060px;
+  margin: 35px auto 60px;
+
+  width: 100%;
+  height: 108px;
+
+  background: #0d99ff;
+  color: #fff;
+  border-radius: 15px;
+  font-size: medium;
+  font-weight: 500;
+
+  background-image: url(https://static.wanted.co.kr/images/type-test/typetest-banner-image.png);
+  background-size: auto 100%;
+  background-position: 100%;
+  background-repeat: no-repeat;
+}
+
+.grid_section .typetest_banner .banner_wrap {
+  padding: 28px 0px 22px 120px;
+}
+
+.grid_section .typetest_banner .banner_wrap div:first-child {
+  font-size: 130%;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.grid_section .typetest_banner .banner_wrap .gotxt_wrap {
+  display: flex;
+  align-items: center;
+}
+
+.grid_section .typetest_banner .banner_wrap svg {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+  margin-left: 3px;
+}
