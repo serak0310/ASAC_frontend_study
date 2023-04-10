@@ -322,7 +322,7 @@ main {
   font-family: inherit;
 }
 
-.whole_section .middle_section .middle_section_wrap .careerContentList {
+.whole_section .middle_section .middle_section_wrap #careerContentList {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -331,12 +331,12 @@ main {
   margin-bottom: 50px;
 }
 
-.whole_section .middle_section .middle_section_wrap .careerContentList li {
+.whole_section .middle_section .middle_section_wrap #careerContentList li {
   width: calc(25% - 20px);
   flex-shrink: 0;
 }
 
-.whole_section .middle_section .middle_section_wrap .careerContentList li img {
+.whole_section .middle_section .middle_section_wrap #careerContentList li img {
   width: 248.4px;
   height: 175px;
   object-fit: cover;
@@ -347,7 +347,7 @@ main {
 .whole_section
   .middle_section
   .middle_section_wrap
-  .careerContentList
+  #careerContentList
   li
   .text {
   display: flex;
@@ -359,7 +359,7 @@ main {
 .whole_section
   .middle_section
   .middle_section_wrap
-  .careerContentList
+  #careerContentList
   li
   .text
   .title {
@@ -372,7 +372,7 @@ main {
 .whole_section
   .middle_section
   .middle_section_wrap
-  .careerContentList
+  #careerContentList
   li
   .text
   .content {
@@ -396,7 +396,7 @@ main {
 .whole_section
   .middle_section
   .middle_section_wrap
-  .careerContentList
+  #careerContentList
   li
   .author {
   display: flex;
@@ -408,7 +408,7 @@ main {
 .whole_section
   .middle_section
   .middle_section_wrap
-  .careerContentList
+  #careerContentList
   li
   .author
   div {
@@ -424,7 +424,7 @@ main {
 .whole_section
   .middle_section
   .middle_section_wrap
-  .careerContentList
+  #careerContentList
   li
   .author
   .mark {
@@ -433,7 +433,7 @@ main {
   object-fit: cover;
 }
 
-.whole_section .middle_section .middle_section_wrap .careerContentList li span {
+.whole_section .middle_section .middle_section_wrap #careerContentList li span {
   color: #8a8a8a;
   font-size: small;
   align-self: center;

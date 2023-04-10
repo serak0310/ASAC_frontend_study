@@ -69,8 +69,8 @@
 							<button class="interst_btn" type="button"><span>MD</span></button>
 						</div>
 					</div>
-					<ul class="careerContentList">
-						<li class="carrerContentList_content">
+					<ul id="careerContentList">
+						<li id="carrerContentList_content">
 							<div><img class="thumbnail" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20220325%2F2%2F30421546.jpg&w=750&q=100" alt="썸네일"></div>
 							<div class="text">
 								<p class="title">LINE X Wanted Session 5-2</p>
@@ -208,7 +208,7 @@
 						</li> -->
 					</ul>
 					<div class="moreContent">
-						<div class = "moreContent_btn">
+						<div class = "moreContent_btn" id="moreContent_btn">
 							<p>더 많은 콘텐츠 보기</p>
 							<svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 19 19"><path d="M2.71967 5.71967C2.98594 5.4534 3.4026 5.4292 3.69621 5.64705L3.78033 5.71967L9.499 11.438L15.2162 5.7211C15.4824 5.45479 15.899 5.43051 16.1927 5.64832L16.2768 5.72092C16.5431 5.98715 16.5674 6.40381 16.3496 6.69745L16.277 6.78158L10.0304 13.0302C9.76416 13.2966 9.34745 13.3208 9.0538 13.103L8.96967 13.0303L2.71967 6.78033C2.42678 6.48744 2.42678 6.01256 2.71967 5.71967Z" fill="currentColor"></path></svg>
 						</div>
@@ -336,14 +336,6 @@
 			  </p>
 		</div>
 	</footer>
-	<script>
-        const container = document.getElementsByClassName('careerContentList');
-        const wrapper = document.getElementsByClassName('careerContentList_content');
-
-        for(let i=0; i<3; i++){
-            const newItem = wrapper.cloneNode(true);
-            container.appendChild(newItem);
-        }
-    </script>
+    <script type="text/javascript" src="./wantedCopy.js"></script>
 </body>
 </html>
