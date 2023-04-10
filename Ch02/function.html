@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 함수 형식
+        // 선언부 == 파라미터(매개변수)
+        function add(x,y){
+            return x+y;
+        }
+
+        // 익명 함수
+        // 화살표 함수(arrow function)
+        // 실행시점==선언시점
+        (x, y) => {
+            return x-y;
+        }
+        // 익명함수 변수에 담기(이름 사용 가능)
+        const minus = (x,y) => {
+            return x-y;
+        }
+
+        // 실행부 == 전달인자(Argument)
+        console.log(add(1,2));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

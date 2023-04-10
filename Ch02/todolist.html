@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+    <link rel="stylesheet" href="./todolist.css" />
+    <script type="text/javascript">
+        window.onload = function(){
+            let input_tf = document.getElementById('input_tf');
+            let input_btn = document.getElementById('input_btn');
+            let todo_list = document.getElementById('todo_list');
+
+            input_btn.addEventListener("click", function(){
+                let createDiv = document.createElement('div');
+                createDiv.innerText = input_tf.value;
+
+                
+
+            })
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>투두리스트</h2>
+        <input id="input_tf" type="text">
+        <button id="input_btn" type="button">입력</button>
+        <li id="todo_list"></li>
+    </div>
+</body>
+</html>

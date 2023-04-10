@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>
+    <style>
+        #wrapper{
+            margin: 50px;
+            text-align: center;     /*가운데 정렬*/
+        }
+        
+        #submitTxt{
+            width: 200px;
+        }
+
+        #submitBtn{
+            width: 70px;
+            background-color: aquamarine;
+            border-color: white;
+        }
+
+        #list{
+            background-color: antiquewhite;
+            width: 300px;
+            margin: 30px auto;      /*auto: 가운데 정렬*/
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="wrapper">
+            <h1>Todo list</h1>
+            <input id="submitTxt" type="text"/>
+            <button id="submitBtn">입력</button>
+            <div id="list"></div>
+        </div>
+    </div>
+
+    <!-- body 위에 생성시 window onload 필요 없음. html 부르기 전 실행 -->
+    <script type="text/javascript">
+        const container = document.getElementById('container');
+        const wrapper = document.getElementById('wrapper');
+
+        // 요소 복사하기
+        for(let i = 0; i < 3; i++){
+            const newItem = wrapper.cloneNode(true);
+            container.appendChild(newItem);         // 컨테이너에 추가
+        }
+    </script>
+</body>
+</html>

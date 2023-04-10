@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = 1;
+        const b = 2;    // 재할당 불가
+        let c = 3;
+
+        if(true){
+            a = 4;
+            // b = 5;   // const 재할당 불가
+            c = 6;
+
+            var d = undefined;      // 하단에 선언되어있어도 먼저 선언된 것처럼 사용
+
+            console.log(d)          
+            console.log(e)
+            console.log(f)
+
+            console.log("abc changed");
+
+            var d = 7;
+            const e = 8;
+            let f = 9;
+
+            console.log("block end");
+        }
+        console.log("block out");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

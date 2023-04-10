@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Object
+        const person = {    // key : value 형태
+            id : 1,
+            name : "이름",
+            age : 20,
+            married: false,
+            address : {
+                country : "South Korea",
+                city : "Seoul"
+            },
+            hobbys : ["music", "skiing"],
+            greeting : function(){
+                alert('Hi i am '+this.name);
+            }
+        }
+
+        console.log(person.name);
+        console.log(person["married"]);
+        console.log(person["address"]["city"]);
+        console.log(person.address.city);
+        console.log(person.hobbys[0]);
+
+        person.greeting();      // 함수 실행
+
+        // phone num 추가
+        const newPerson = {
+            ...person,      // 상속
+            phoneNumber : "010-1111-2222",
+        };
+
+        const marriedPerson = {
+            ...person,      // 상속
+            married : true
+        };
+
+        const user = {
+            email : "ss@naver.com",
+            name : "molly",
+            region: "South Korea +82",
+            phoneNum : "010-1111-2222",
+            checkNum : "dadfa"
+        }
+
+        // Array: Object의 한 형태
+        // 호출. arr[1].name
+        const arr = [
+            {
+            email : "1@naver.com",
+            name : "1name",
+            phoneNum : "010-1111-1111",
+            },
+            {
+            email : "2@naver.com",
+            name : "2name",
+            phoneNum : "010-2222-2222",
+            },
+            {
+            email : "33@naver.com",
+            name : "3name",
+            phoneNum : "010-3333-3333",
+            }
+        ]
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
