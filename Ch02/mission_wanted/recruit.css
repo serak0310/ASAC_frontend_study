@@ -531,11 +531,11 @@ main {
   margin-bottom: 10px;
 }
 
-.grid_section .enterprise_list .content .header{
+.grid_section .enterprise_list .content .content_header{
 position: relative;
 }
 
-.grid_section .enterprise_list .content .header .thumbnail{
+.grid_section .enterprise_list .content .content_header .thumbnail{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -543,7 +543,7 @@ position: relative;
   border-radius: 3px;
 }
 
-.grid_section .enterprise_list .content .header .bookmark{
+.grid_section .enterprise_list .content .content_header .bookmark{
   position: absolute;
   background: none;
   padding: 8px 6px;
@@ -553,23 +553,23 @@ position: relative;
   right: 0;
 }
 
-.grid_section .enterprise_list .content .body{
+.grid_section .enterprise_list .content .content_body{
   padding: 14px 0px;
 }
 
-.grid_section .enterprise_list .content .body .title{
+.grid_section .enterprise_list .content .content_body .title{
   color: #333;
   font-size: 17px;
   font-weight: 600;
   line-height: 1.2;
 }
 
-.grid_section .enterprise_list .content .body .name{
+.grid_section .enterprise_list .content .content_body .name{
   font-size: 14px;
   margin-top: 10px;
 }
 
-.grid_section .enterprise_list .content .body .responseRate{
+.grid_section .enterprise_list .content .content_body .responseRate{
   border: 1px solid #00aead;
   color: #00aead;
   border-radius: 2px;
@@ -582,7 +582,7 @@ position: relative;
   line-height: 19px;
 }
 
-.grid_section .enterprise_list .content .body .region{
+.grid_section .enterprise_list .content .content_body .region{
   font-weight: 400;
   color: #999;
   font-size: 14px;
@@ -590,7 +590,7 @@ position: relative;
   margin-top: 10px;
 }
 
-.grid_section .enterprise_list .content .body .pay{
+.grid_section .enterprise_list .content .content_body .pay{
   margin-top: 10px;
   color: #333;
   font-size: 14px;
