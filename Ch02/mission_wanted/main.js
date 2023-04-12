@@ -21,4 +21,23 @@ moreContent_btn.addEventListener("click", function(){
 setTimeout(function() {
     document.getElementById('spinner').style.display = 'none'; // 스피너 숨기기
     document.getElementById('loaded').classList.add('show'); // 로딩 완료 후 보이기
-  }, 3000); // 3초 후 실행
+}, 3000); // 3초 후 실행
+
+// 로그인 모달 창
+var login_modal = document.getElementById("login_modal");
+var signUp_btn = document.getElementById("signUp-btn");
+var span = document.getElementsByClassName("close")[0];
+
+signUp_btn.onclick = function() {
+    login_modal.style.display = "block";
+}
+  
+span.onclick = function() {
+    login_modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == login_modal) {
+        login_modal.style.display = "none";
+    }
+}

@@ -163,9 +163,10 @@ header {
   width: 100%;
   /* 상단에 고정 후 띄우기 */
   position: fixed;
-  z-index: 999;
+  z-index: 1;
 }
 
+/* 스피너 */
 .spinner {
   position: fixed;
   display: block;
@@ -192,13 +193,47 @@ header {
   display: block;
 }
 
+/* 로그인 모달 */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 3; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal_content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 네비게이션바 */
 .nav {
   height: 100%;
   width: 100%;
   max-width: 1060px;
-  margin: 0 auto;
-  /* 가운데 정렬 */
-
+  margin: 0 auto;     /* 가운데 정렬 */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
