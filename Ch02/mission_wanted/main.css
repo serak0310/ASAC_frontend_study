@@ -86,6 +86,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -100,17 +101,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -118,6 +123,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -141,7 +147,8 @@ button {
 
 body {
   font-family: "Noto Sans KR", sans-serif;
-  -ms-overflow-style: none; /*스크롤뷰 안보이게*/
+  -ms-overflow-style: none;
+  /*스크롤뷰 안보이게*/
 }
 
 ::-webkit-scrollbar {
@@ -159,11 +166,38 @@ header {
   z-index: 999;
 }
 
+.spinner {
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 48.5%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 로딩 완료 후 보이는 화면 스타일링 */
+.loaded {
+  display: none;
+}
+.loaded.show {
+  display: block;
+}
+
 .nav {
   height: 100%;
   width: 100%;
   max-width: 1060px;
-  margin: 0 auto; /* 가운데 정렬 */
+  margin: 0 auto;
+  /* 가운데 정렬 */
 
   display: flex;
   flex-direction: row;
@@ -253,7 +287,8 @@ main {
   width: 100%;
   max-width: 1060px;
 
-  margin: 0 auto; /* 가운데 정렬 */
+  margin: 0 auto;
+  /* 가운데 정렬 */
 }
 
 .whole_section .top_banner {
@@ -289,11 +324,7 @@ main {
   margin-left: 10px;
 }
 
-.whole_section
-  .middle_section
-  .middle_section_wrap
-  .tagslide
-  .intersetTagSlide {
+.whole_section .middle_section .middle_section_wrap .tagslide .intersetTagSlide {
   margin: 30px 0;
   display: flex;
   justify-content: space-between;
@@ -303,12 +334,7 @@ main {
   overflow: scroll;
 }
 
-.whole_section
-  .middle_section
-  .middle_section_wrap
-  .tagslide
-  .intersetTagSlide
-  .interst_btn {
+.whole_section .middle_section .middle_section_wrap .tagslide .intersetTagSlide .interst_btn {
   background-color: #fff;
   font-size: medium;
   border: 1px solid #e1e2e3;
@@ -344,74 +370,54 @@ main {
   border-radius: 3px;
 }
 
-.whole_section
-  .middle_section
-  .middle_section_wrap
-  #careerContentList
-  li
-  .text {
+.whole_section .middle_section .middle_section_wrap #careerContentList li .text {
   display: flex;
   flex-direction: column;
   margin: 12px 0px 0px;
   gap: 5px;
 }
 
-.whole_section
-  .middle_section
-  .middle_section_wrap
-  #careerContentList
-  li
-  .text
-  .title {
+.whole_section .middle_section .middle_section_wrap #careerContentList li .text .title {
   font-size: large;
   font-weight: 600;
   line-height: 150%;
   align-items: center;
 }
 
-.whole_section
-  .middle_section
-  .middle_section_wrap
-  #careerContentList
-  li
-  .text
-  .content {
+.whole_section .middle_section .middle_section_wrap #careerContentList li .text .content {
   font-size: 80%;
   font-weight: 400;
   color: #8a8a8a;
   line-height: 130%;
 
   /* 말줄임 처리 */
-  white-space: normal; /*해당 너비에 맞게 줄바꿈이 이루어지게 함*/
-  overflow: hidden; /*해당 너비를 넘어선 부분의 글자들을 숨겨줌*/
-  text-overflow: ellipsis; /*말줄임표(...)가 숨겨지는 영역의 끝 부분에 생김*/
+  white-space: normal;
+  /*해당 너비에 맞게 줄바꿈이 이루어지게 함*/
+  overflow: hidden;
+  /*해당 너비를 넘어선 부분의 글자들을 숨겨줌*/
+  text-overflow: ellipsis;
+  /*말줄임표(...)가 숨겨지는 영역의 끝 부분에 생김*/
   height: 2.6em;
-  text-align: left; /*텍스트를 가운데나 오른쪽 정렬할 경우 말줄임표가 이상한 곳으로 갈 수 있음*/
-  word-wrap: break-word; /*단어 단위의 줄 바꿈*/
-  display: -webkit-box; /*유연하게 height를 증감시킬 수 있는 플렉스 박스형태로 변환*/
-  -webkit-line-clamp: 2; /*보여줄 줄 수*/
-  -webkit-box-orient: vertical; /*플렉스 박스의 방향 설정(가로)*/
+  text-align: left;
+  /*텍스트를 가운데나 오른쪽 정렬할 경우 말줄임표가 이상한 곳으로 갈 수 있음*/
+  word-wrap: break-word;
+  /*단어 단위의 줄 바꿈*/
+  display: -webkit-box;
+  /*유연하게 height를 증감시킬 수 있는 플렉스 박스형태로 변환*/
+  -webkit-line-clamp: 2;
+  /*보여줄 줄 수*/
+  -webkit-box-orient: vertical;
+  /*플렉스 박스의 방향 설정(가로)*/
 }
 
-.whole_section
-  .middle_section
-  .middle_section_wrap
-  #careerContentList
-  li
-  .author {
+.whole_section .middle_section .middle_section_wrap #careerContentList li .author {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-top: 12px;
 }
 
-.whole_section
-  .middle_section
-  .middle_section_wrap
-  #careerContentList
-  li
-  .author
-  div {
+.whole_section .middle_section .middle_section_wrap #careerContentList li .author div {
   width: 24px;
   height: 24px;
   margin-right: 5px;
@@ -421,13 +427,7 @@ main {
   overflow: hidden;
 }
 
-.whole_section
-  .middle_section
-  .middle_section_wrap
-  #careerContentList
-  li
-  .author
-  .mark {
+.whole_section .middle_section .middle_section_wrap #careerContentList li .author .mark {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -447,11 +447,7 @@ main {
   height: 50px;
 }
 
-.whole_section
-  .middle_section
-  .middle_section_wrap
-  .moreContent
-  .moreContent_btn {
+.whole_section .middle_section .middle_section_wrap .moreContent .moreContent_btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -468,12 +464,7 @@ main {
   font-weight: 600;
 }
 
-.whole_section
-  .middle_section
-  .middle_section_wrap
-  .moreContent
-  .moreContent_btn
-  svg {
+.whole_section .middle_section .middle_section_wrap .moreContent .moreContent_btn svg {
   width: 16px;
   height: 16px;
   margin-left: 5px;
@@ -537,13 +528,11 @@ main {
   justify-content: center;
   align-items: center;
 
-  background-image: linear-gradient(
-    90deg,
-    #01a9fe -12%,
-    #2f5fef 37%,
-    #046afe 72%,
-    #00d2dd 110%
-  );
+  background-image: linear-gradient(90deg,
+      #01a9fe -12%,
+      #2f5fef 37%,
+      #046afe 72%,
+      #00d2dd 110%);
   border-radius: 60px;
   margin: 60px auto 0px;
   max-width: 1060px;
