@@ -6,7 +6,7 @@ const nextEventBtn = document.querySelector('.main_banner_next');
 const slideList = document.querySelector('.slide_list');
 const slideItems = document.querySelectorAll('.slide_item');
 
-let eventCounter = 1;  // 
+let eventCounter = 1;  // 현재 슬라이드 위치 지정
 const eventSize = slideItems[0].clientWidth;    // 한 슬라이드 사이즈 지정
 
 const cloneFirstElement = () => {
