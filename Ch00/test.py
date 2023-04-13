@@ -4,11 +4,15 @@
 
 # R = runx&runy
 # print(min(R) if R else -1)
-s1 = ["a", "b", "c"]
-s2 = ["com", "b", "d", "p", "c"]
+from itertools import combinations
 
-count = 0
-for i in range(len(s1)):
-    if s1[i] in s2:
-        count +=1
-print(count)
+num_list = [1, 2, 3, 4, 5, 6, 7, 8]
+n=2
+answer = [[]]
+for i in range(0, len(num_list)//n):
+    for j in range(n):
+        print(i, j)
+        answer[i][j] = num_list[0]
+        num_list = num_list[1:]
+
+print(answer)
