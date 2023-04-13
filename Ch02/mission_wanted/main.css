@@ -149,6 +149,7 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   -ms-overflow-style: none;
   /*스크롤뷰 안보이게*/
+  overflow: auto;
 }
 
 ::-webkit-scrollbar {
@@ -215,26 +216,13 @@ header {
   border: 1px solid #8a8a8a;
   width: 24%;
   height: 80%;
-
-  position: absolute;
+  min-width: 320px;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   /* 수평 수직으로 중앙에 위치 */
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+  overflow-y: auto;       /*모달 스크롤*/
 }
 
 .loginmodal_title {
@@ -266,7 +254,7 @@ header {
   margin-bottom: 45px;
 }
 
-form {
+#login_form {
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -290,6 +278,124 @@ label[for="userEmail"] {
   font-weight: 400;
   margin: 8px auto;
   box-sizing: border-box;
+}
+
+.continue_btn{
+  width: 100%;
+  height: 50px;
+  min-height: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  background-color: #36f;
+  border: none;
+  margin-top: 10px;
+  color: #fff;
+  font-weight: 500;
+}
+
+#login_form>p{
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #939393;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.socialLogin_btns{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.socialLogin_btns svg{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid;
+  color: #e1e2e3;
+}
+
+.socialLogin_btns p{
+  font-size: 11px;
+  font-weight: 500;
+  color: #888;
+  margin-top: 8px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.findacount_btn{
+  color: #767676;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 30px;
+}
+
+#login_form hr{
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid #e1e2e3;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.TOS{
+  margin: 30px auto 15px auto;
+  width: 100%;
+  text-align: center;
+  color: #767676;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.TOS a:nth-child(2){
+  margin-left: 7px;
+  font-weight: 600;
+}
+
+.companyname_txt{
+  margin: 30px auto 30px auto;
+  width: 100%;
+  text-align: center;
+  color: #767676;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.language_select{
+  width: 35%;
+  margin: 0 auto;
+  height: 34px;
+  min-height: 34px;
+  border-radius: 5px;
+  border: 1px solid #e1e2e3;
+
+  position: relative;
+}
+
+.language_select img{
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  width: 23px;
+  height: 16px;
+  border-radius: 2px;
+  z-index: 3;
+  border: 1px solid #e1e2e3;
+}
+
+select{
+  padding-left: 40px;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
 }
 
 /* 네비게이션바 */
@@ -349,7 +455,7 @@ label[for="userEmail"] {
   font-weight: 600;
 }
 
-.nav .sub-menu .signUp-btn {
+.nav .sub-menu .login-btn {
   font-weight: 500;
 }
 

@@ -25,19 +25,22 @@ setTimeout(function() {
 
 // 로그인 모달 창
 var login_modal = document.getElementById("login_modal");
-var signUp_btn = document.getElementById("signUp-btn");
+var login_btn = document.getElementById("login-btn");
 var span = document.getElementsByClassName("close")[0];
+var body = document.body;
 
-signUp_btn.onclick = function() {
+login_btn.onclick = function() {    // 로그인 버튼 클릭시 모달 팝업
     login_modal.style.display = "block";
-}
-  
-span.onclick = function() {
-    login_modal.style.display = "none";
+    body.style.overflow = "hidden";     // 모달 제외 외부 스크롤 막기
 }
 
-window.onclick = function(event) {
+window.onclick = function(event) {  // 모달 창 외부 클릭시 모달 
     if (event.target == login_modal) {
         login_modal.style.display = "none";
+        body.style.overflow = "auto";    // 모달 제외 외부 스크롤 가능 
     }
 }
+
+// login_modal.onclick = function() {  // 모달 창 외부 클릭시 모달 
+//     login_modal.style.display = "none";
+// }
