@@ -222,7 +222,8 @@ header {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   /* 수평 수직으로 중앙에 위치 */
-  overflow-y: auto;       /*모달 스크롤*/
+  overflow-y: auto;
+  /*모달 스크롤*/
 }
 
 .loginmodal_title {
@@ -272,6 +273,7 @@ label[for="userEmail"] {
   min-height: 50px;
   padding: 0px 12px;
   background-color: transparent;
+  outline: none;
   border: 1px solid rgb(225, 226, 227);
   border-radius: 5px;
   font-size: 16px;
@@ -280,11 +282,11 @@ label[for="userEmail"] {
   box-sizing: border-box;
 }
 
-#userEmail:focus{
+#userEmail:focus {
   border: 1px solid #36f;
 }
 
-.continue_btn{
+.continue_btn {
   width: 100%;
   height: 50px;
   min-height: 50px;
@@ -298,7 +300,7 @@ label[for="userEmail"] {
   font-weight: 500;
 }
 
-#login_form>p{
+#login_form>p {
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
@@ -308,13 +310,13 @@ label[for="userEmail"] {
   margin-bottom: 15px;
 }
 
-.socialLogin_btns{
+.socialLogin_btns {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-.socialLogin_btns svg{
+.socialLogin_btns svg {
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -322,7 +324,7 @@ label[for="userEmail"] {
   color: #e1e2e3;
 }
 
-.socialLogin_btns p{
+.socialLogin_btns p {
   font-size: 11px;
   font-weight: 500;
   color: #888;
@@ -331,7 +333,7 @@ label[for="userEmail"] {
   text-align: center;
 }
 
-.findacount_btn{
+.findacount_btn {
   color: #767676;
   font-size: 14px;
   font-weight: 500;
@@ -339,7 +341,7 @@ label[for="userEmail"] {
   margin-top: 30px;
 }
 
-#login_form hr{
+#login_form hr {
   border: none;
   width: 100%;
   border-bottom: 1px solid #e1e2e3;
@@ -347,7 +349,7 @@ label[for="userEmail"] {
   margin-bottom: 30px;
 }
 
-.TOS{
+.TOS {
   margin: 30px auto 15px auto;
   width: 100%;
   text-align: center;
@@ -356,12 +358,12 @@ label[for="userEmail"] {
   font-weight: 500;
 }
 
-.TOS a:nth-child(2){
+.TOS a:nth-child(2) {
   margin-left: 7px;
   font-weight: 600;
 }
 
-.companyname_txt{
+.companyname_txt {
   margin: 30px auto 30px auto;
   width: 100%;
   text-align: center;
@@ -370,7 +372,7 @@ label[for="userEmail"] {
   font-weight: 300;
 }
 
-.language_select{
+.language_select {
   width: 35%;
   margin: 0 auto;
   height: 34px;
@@ -381,7 +383,7 @@ label[for="userEmail"] {
   position: relative;
 }
 
-.language_select img{
+.language_select img {
   position: absolute;
   top: 8px;
   left: 15px;
@@ -392,7 +394,7 @@ label[for="userEmail"] {
   border: 1px solid #e1e2e3;
 }
 
-select{
+select {
   padding-left: 40px;
   width: 100%;
   height: 100%;
