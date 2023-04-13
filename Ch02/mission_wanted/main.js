@@ -44,10 +44,6 @@ window.onclick = function (event) {
   }
 };
 
-// login_modal.onclick = function() {  // 모달 창 외부 클릭시 모달
-//     login_modal.style.display = "none";
-// }
-
 /*--- 이메일 형식 검사 ---*/
 let emailValue = "";
 const userEmail_tf = document.getElementById("userEmail");
