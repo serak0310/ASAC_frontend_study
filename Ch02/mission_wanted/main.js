@@ -46,20 +46,33 @@ window.onclick = function(event) {  // 모달 창 외부 클릭시 모달
 // }
 
 /*--- 이메일 형식 검사 ---*/
-let emailValue = ""
-const emailNotValid_txt = document.getElementById('emailNotValid_txt')
+let emailValue = "";
+const emailNotValid_txt = document.getElementById('emailNotValid_txt');
+const continue_btn = document.getElementById('continue_btn');
 
 function emailCheck(){
     let emailRegex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
     emailValue = document.getElementById('userEmail').value;
 
-    if (emailValue.match(emailRegex) != null) {
-        // 이메일 형식이 맞다면, 버튼 활성화 + border blue
+    if (emailValue==""){
+        // 입력이 없다면, 버튼 비활성화 + 경고창X
         emailNotValid_txt.style.display = "none";
-    }
-    else {
-        // 이메일 형식이 아니라면, 버튼 비활성화 + border red
-        emailNotValid_txt.style.display = "block";
+        continue_btn.style.backgroundColor = "#f2f4f7";
+        continue_btn.style.color = "#ccc";
+    }else{
+        // 입력이 있다면
+        if (emailValue.match(emailRegex) != null) {
+            // 이메일 형식이 맞다면, 버튼 활성화 + 경고창X
+            emailNotValid_txt.style.display = "none";
+            continue_btn.style.backgroundColor = "#36f";
+            continue_btn.style.color = "#fff";
+        }
+        else {
+            // 이메일 형식이 아니라면, 버튼 비활성화 + 경고창O
+            emailNotValid_txt.style.display = "block";
+            continue_btn.style.backgroundColor = "#f2f4f7";
+            continue_btn.style.color = "#ccc";
+        }
     }
 }
 

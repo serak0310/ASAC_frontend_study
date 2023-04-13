@@ -305,10 +305,12 @@ label[for="userEmail"] {
   border-radius: 25px;
   font-size: 16px;
   margin-bottom: 10px;
-  background-color: #36f;
+  /* background-color: #36f;  */
+  /* color: #fff; */
+  background-color: #f2f4f7;
+  color: #ccc;
   border: none;
   margin-top: 10px;
-  color: #fff;
   font-weight: 500;
 }
 
