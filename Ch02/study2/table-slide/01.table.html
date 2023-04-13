@@ -1,76 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>table</title>
-    <style>
-      tr td {
-        border: 1px solid black;
-        width: 100px;
-        height: 100px;
-      }
-    </style>
-  </head>
-  <body>
-    <table>
-      <tr>
-        <td colspan="6"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td rowspan="2"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td rowspan="3"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
-  </body>
-  <script>
-    const arr = [
-      {
-        color: "red",
-        value: "#f00",
-      },
-      {
-        color: "green",
-        value: "#0f0",
-      },
-      {
-        color: "blue",
-        value: "#00f",
-      },
-      {
-        color: "cyan",
-        value: "#0ff",
-      },
-      {
-        color: "magenta",
-        value: "#f0f",
-      },
-      {
-        color: "yellow",
-        value: "#ff0",
-      },
-      {
-        color: "black",
-        value: "#000",
-      },
-    ];
-  </script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>table</title>
+  <style>
+    tr td {
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 실습1 -->
+  <table>
+    <tr>
+      <td colspan="6"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td rowspan="2"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td rowspan="3"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  <hr>
+
+  <!-- 실습2 -->
+  <!-- 테이블 안에 arr에 있는 값들 넣어서 한 번에 뿌려주기 -->
+  <table id="color-table">
+    <thead>
+      <td>color</td>
+      <td>value</td>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+</body>
+<script>
+  const arr = [
+    {
+      color: "red",
+      value: "#f00",
+    },
+    {
+      color: "green",
+      value: "#0f0",
+    },
+    {
+      color: "blue",
+      value: "#00f",
+    },
+    {
+      color: "cyan",
+      value: "#0ff",
+    },
+    {
+      color: "magenta",
+      value: "#f0f",
+    },
+    {
+      color: "yellow",
+      value: "#ff0",
+    },
+    {
+      color: "black",
+      value: "#000",
+    },
+  ];
+
+  const tbodyArr = [];      // 새로운 바디를 담을 배열 선언
+
+  for (const a of arr) {     // arr에 있는 내용을 한번씩 돈다. (like pypthon: for n in array)
+    // 백틱 안에서 변수 사용 가능 달러기호
+    tbodyArr.push(
+      `
+        <tr>
+          <td>${a.color}</td>
+          <td>${a.color}</td>
+        </tr>
+        `
+    )
+  }
+
+  // object 안의 요소들이 td안에 하나씩 넣어서 돌리기
+  document.querySelector("table > tbody").innerHTML = tbodyArr.join("")
+</script>
+
 </html>
