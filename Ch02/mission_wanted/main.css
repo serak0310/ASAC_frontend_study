@@ -157,7 +157,7 @@ body {
   display: none;
 }
 
-/* 스피너 */
+/*-------------------------------- 스피너 --------------------------------*/
 .spinner {
   position: fixed;
   display: block;
@@ -176,7 +176,7 @@ body {
   }
 }
 
-/* 로딩 완료 후 보이는 화면 스타일링 */
+/*-------------------------------- 로딩 완료 후 보이는 화면  --------------------------------*/
 .loaded {
   display: none;
 }
@@ -185,7 +185,7 @@ body {
   display: block;
 }
 
-/* 로그인 모달 */
+/*-------------------------------- 로그인 모달 --------------------------------*/
 .modal {
   display: none;
   position: fixed;
@@ -425,7 +425,7 @@ label[for="userEmail"] {
   border-radius: 4px;
 }
 
-/* 회원가입 모달 */
+/*-------------------------------- 회원가입 모달 --------------------------------*/
 .joinmodal_wrapper {
   width: 100%;
   flex-direction: column;
@@ -480,9 +480,9 @@ label[for="userEmail"] {
 
 .modal_body {
   width: 100%;
-  height: 85%;
+  height: 90%;
   position: absolute;
-  padding-top: 500px;
+  padding-top: 490px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -686,7 +686,7 @@ label[for="userEmail"] {
   font-weight: 500;
 }
 
-/* 헤더 네비게이션바 */
+/*-------------------------------- 헤더 네비게이션바 --------------------------------*/
 header {
   background-color: white;
   border-bottom: 1px solid #e1e2e3;
@@ -780,6 +780,7 @@ header {
   font-weight: 400;
 }
 
+/*-------------------------------- 메인 --------------------------------*/
 main {
   width: 100%;
 }
@@ -1216,6 +1217,7 @@ main {
   height: 16px;
 }
 
+/*-------------------------------- footer --------------------------------*/
 footer {
   background-color: #fff;
   border-top: 1px solid #e1e2e3;
