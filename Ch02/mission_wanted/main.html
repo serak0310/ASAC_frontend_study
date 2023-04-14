@@ -85,22 +85,25 @@
 						</div>
 						<div class="formcontent_wrapper">
 							<div class="formcontent_title">휴대폰 번호</div>
-							<select name="phoneRegion_select">
-								<option value="KR">South Korea +82</option>
-								<option value="JP">Japan +81</option>
-								<option value="TW">Taiwan +886</option>
-								<option value="HK">Hong Kong +852</option>
-							</select>
+							<div class="phoneRegion_select">
+								<select name="phoneRegion_select">
+									<option value="KR">South Korea +82</option>
+									<option value="JP">Japan +81</option>
+									<option value="TW">Taiwan +886</option>
+									<option value="HK">Hong Kong +852</option>
+								</select>
+							</div>
 							<div class="phoneCheck_wrapper">
-								<input type="text" id="phoneNum_tf" name="phoneNum_tf" placeholder="(예시)01012345678">
+								<input type="tel" id="phoneNum_tf" name="phoneNum_tf" placeholder="(예시) 01012345678">
 								<button type="button" class="phoneNumCheck_btn" disabled=True>인증번호 받기</button>
+								<!-- <div class="phoneNumCheck_btn" disabled=True>인증번호 받기</div> -->
 							</div>
 							<input type="text" id="checkNum_tf" name="checkNum_tf" placeholder="인증번호를 입력해주세요." disabled=True>
 						</div>
 						<div class="formcontent_wrapper">
 							<div class="formcontent_title">비밀번호</div>
-							<input type="text" id="pw_tf" name="pw_tf" placeholder="비밀번호를 입력해주세요.">
-							<input type="text" id="pwCheck_tf" name="pwCheck_tf" placeholder="비밀번호를 다시 한번 입력해주세요.">
+							<input type="password" id="pw_tf" name="pw_tf" placeholder="비밀번호를 입력해주세요.">
+							<input type="password" id="pwCheck_tf" name="pwCheck_tf" placeholder="비밀번호를 다시 한번 입력해주세요.">
 							<p>영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합해 8자 이상 16자 이하로 입력해주세요.</p>
 						</div>
 					</form>
