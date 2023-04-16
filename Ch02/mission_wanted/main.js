@@ -46,7 +46,7 @@ window.onclick = function (event) {
 
 /*--- 이메일 형식 검사 ---*/
 let emailValue = "";
-const userEmail_tf = document.getElementById("userEmail");
+const userEmail_tf = document.getElementById("userEmail");    // 로그인 창 이메일
 const emailNotValid_txt = document.getElementById("emailNotValid_txt");
 const continue_btn = document.getElementById("continue_btn");
 
@@ -83,10 +83,19 @@ function emailCheck() {
 
 /*---  회원가입 모달 창 ---*/
 var join_modal = document.getElementById("join_modal");
+var userEmail_join = document.getElementById("userEmail_tf");   // 회원가입창 email
+var backToLogin_btn = document.getElementById("backToLogin_btn");   // 회원가입창 취소버튼
 
 continue_btn.onclick = function () {
   // 이메일로 계속하기 버튼 클릭시 모달 팝업
+  userEmail_join.placeholder = userEmail_tf.value;              // 이메일 자동 변경
   join_modal.style.display = "block";
   login_modal.style.display = "none";
   body.style.overflow = "hidden"; // 모달 제외 외부 스크롤 막기
 };
+
+backToLogin_btn.onclick = function(){
+  join_modal.style.display = "none";
+  login_modal.style.display = "block";
+  body.style.overflow = "hidden"; // 모달 제외 외부 스크롤 막기
+}
