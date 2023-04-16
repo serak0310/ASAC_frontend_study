@@ -7,7 +7,7 @@ for (let i = 0; i < 7; i++) {
   container.appendChild(newItem);
 }
 
-/*--- 무한스크롤 구현 ---*/
+/*--- 무한스크롤 ---*/
 window.addEventListener('scroll', function() {
   // 스크롤 이벤트 발생 시 처리할 내용
   var scrollHeight = document.documentElement.scrollHeight; // 문서 전체 높이
