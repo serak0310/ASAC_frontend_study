@@ -15,7 +15,7 @@ window.addEventListener('scroll', function() {
   var clientHeight = document.documentElement.clientHeight; // 브라우저 창 높이
   var scrollBottom = scrollHeight - scrollTop - clientHeight; // 스크롤 바닥과 브라우저 창 바닥 간의 거리
 
-  if (scrollBottom < 20) { // 스크롤 바닥과 브라우저 창 바닥 간의 거리가 100px 이하일 때
+  if (scrollBottom < 20) { // 스크롤 바닥과 브라우저 창 바닥 간의 거리가 20px 이하일 때
     loadMore(); // 새로운 콘텐츠 로드
   }
 });

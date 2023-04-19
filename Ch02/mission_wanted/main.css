@@ -166,6 +166,14 @@ body {
   animation: spin 2s linear infinite;
 }
 
+.continue_btn_close{
+  color: red;
+}
+
+.contine_btn_open{
+  color: blue;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0);
@@ -285,7 +293,7 @@ label[for="userEmail"] {
   border-radius: 5px;
   font-size: 16px;
   font-weight: 400;
-  margin: 8px auto 30px;
+  margin: 8px auto;
   box-sizing: border-box;
 }
 

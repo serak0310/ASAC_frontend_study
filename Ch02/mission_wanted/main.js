@@ -87,7 +87,7 @@ var userEmail_join = document.getElementById("userEmail_tf");   // 회원가입�
 var backToLogin_btn = document.getElementById("backToLogin_btn");   // 회원가입창 취소버튼
 
 continue_btn.onclick = function () {
-  // 이메일로 계속하기 버튼 클릭시 모달 팝업
+  // 이메일로 계속하기 버튼 클릭시 회원가입 모달 팝업
   userEmail_join.placeholder = userEmail_tf.value;              // 이메일 자동 변경
   join_modal.style.display = "block";
   login_modal.style.display = "none";
