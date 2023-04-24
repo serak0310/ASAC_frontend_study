@@ -1,12 +1,10 @@
 import './App.css';
-import TodoList from './TodoList.js';
-import Todo from './Todo';
+import RootRouter from './routes/RootRouter';
 
 function App() {
   return (
     <div className="App">
-      <TodoList/>
-      <Todo/>
+      <RootRouter/>
     </div>
   );
 }
