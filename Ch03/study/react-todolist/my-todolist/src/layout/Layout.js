@@ -5,7 +5,7 @@ const Layout = ({ children, tabId }) => {
   const routes = [
     { id: 0, path: "/", label: "메인" },
     { id: 1, path: "/sub", label: "서브" },
-    { id: 2, path: "/todo", label: "todo"},
+    { id: 2, path: "/todo", label: "todo" },
   ];
   return (
     <>
@@ -14,10 +14,14 @@ const Layout = ({ children, tabId }) => {
           return (
             <>
               <Link to={route.path}>
-                <span style={{
+                <span
+                  style={{
                     padding: "10px",
-                    backgroundColor : route.id === tabId ? "green" : ""
-            }}>{route.label}</span>
+                    backgroundColor: route.id === tabId ? "green" : "",
+                  }}
+                >
+                  {route.label}
+                </span>
               </Link>
             </>
           );

@@ -68,6 +68,30 @@ print(f)                                문자열 1개 출력하는 예제
 # print(M, N)
 
 
-n = int(input())
-a = ''.join([str(i)+" " for i in range(1, n) if n%i==0])+str(n)
-print(a)
+# n = int(input())
+# a = ''.join([str(i)+" " for i in range(1, n) if n%i==0])+str(n)
+# print(a)
+
+# T = int(input())
+
+# for test_case in range(1, T + 1):
+#     n = int(input())
+#     nums = sorted(list(map(int, input().split())))
+#     answer = ''.join(str(i)+" " for i in nums)
+#     print(f"#{test_case} {answer}")
+
+dots = [[1, 4], [9, 2], [3, 8], [11, 6]]
+dot1 = dots[0]
+dot2 = dots[1]
+dot3 = dots[2]
+dot4 = dots[3]
+
+for i in range(3):
+
+if (dot1[0]-dot2[0])**2+(dot1[1]-dot2[1])**2 == (dot3[0]-dot4[0])**2+(dot3[1]-dot4[1])**2:
+      print(1)
+if (dot1[0]-dot3[0])**2+(dot1[1]-dot3[1])**2 == (dot2[0]-dot4[0])**2+(dot2[1]-dot4[1])**2:
+      print(1)
+if (dot1[0]-dot4[0])**2+(dot1[1]-dot4[1])**2 == (dot2[0]-dot3[0])**2+(dot2[1]-dot3[1])**2:
+      print(1)
+print(0)
