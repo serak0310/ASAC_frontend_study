@@ -3,6 +3,7 @@ import "./App.css";
 import Amount from "./Amount";
 import ClassLifeCycle from "./ClassLifeCycle";
 import { useState } from "react";
+import LifeCycle from "./LifeCycle";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,11 +15,15 @@ function App() {
           setCount((x) => x + 1);
         }}
       >
-        button
+        app button
       </button>
       {
-        count < 2 && <ClassLifeCycle/>
+        count < 5 && <LifeCycle/>
       }
+      {/* <LifeCycle/> */}
+      {/* {
+        count < 2 && <ClassLifeCycle/>
+      } */}
       {/* <ClassLifeCycle /> */}
     </div>
   );

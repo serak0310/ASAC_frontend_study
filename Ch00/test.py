@@ -72,26 +72,35 @@ print(f)                                문자열 1개 출력하는 예제
 # a = ''.join([str(i)+" " for i in range(1, n) if n%i==0])+str(n)
 # print(a)
 
-# T = int(input())
+T = int(input())
 
-# for test_case in range(1, T + 1):
-#     n = int(input())
-#     nums = sorted(list(map(int, input().split())))
-#     answer = ''.join(str(i)+" " for i in nums)
-#     print(f"#{test_case} {answer}")
+for test_case in range(1, T + 1):
+      n = int(input())
+      m = n-1
+      arr = [[0]*n for _ in range(n)]
+      num = 1
 
-dots = [[1, 4], [9, 2], [3, 8], [11, 6]]
-dot1 = dots[0]
-dot2 = dots[1]
-dot3 = dots[2]
-dot4 = dots[3]
+      
+      # 첫 줄
+      for i in range(n):
+            arr[0][i] = num
+            num += 1
 
-for i in range(3):
+      # 오른쪽
+      for i in range(1, n):
+            arr[i][m] = num
+            num += 1
+      
+      # 마지막 줄
+      for i in range(m-1, -1, -1):
+            arr[m][i] = num
+            num += 1
+      
+      # 왼쪽
+      for i in range(m-1, 0, -1):
+            arr[i][0] = num
+            num += 1
 
-if (dot1[0]-dot2[0])**2+(dot1[1]-dot2[1])**2 == (dot3[0]-dot4[0])**2+(dot3[1]-dot4[1])**2:
-      print(1)
-if (dot1[0]-dot3[0])**2+(dot1[1]-dot3[1])**2 == (dot2[0]-dot4[0])**2+(dot2[1]-dot4[1])**2:
-      print(1)
-if (dot1[0]-dot4[0])**2+(dot1[1]-dot4[1])**2 == (dot2[0]-dot3[0])**2+(dot2[1]-dot3[1])**2:
-      print(1)
-print(0)
+      print(f"#{test_case}")
+      for i in range(n):
+            print(''.join(str(arr[i][j])+" " for j in range(n)))
